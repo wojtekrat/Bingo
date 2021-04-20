@@ -3,7 +3,6 @@ body {
     background-color: rgba(255, 255, 255, 0.527);
     overflow: hidden;
     cursor: default;
-    
 }
 
 #title {
@@ -130,8 +129,8 @@ body {
 }
 
 .correctTile {
-    height: 60px;
-    width: 60px;
+    height: 56px;
+    width: 56px;
     background-color: rgb(180,58,142);
     border-radius: 25px;
     color: white;
@@ -140,21 +139,19 @@ body {
     align-items: center;
     justify-content: center;
     font-family: 'Bungee Inline', cursive;
-    
+    border: 2px solid rgb(46, 17, 73); 
 }
-
 
 #bingoNumbers {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 780px;
-    
+    width: 780px;   
 }
 
 .emptyShow {
-    height: 50px;
-    width: 50px;
+    height: 48px;
+    width: 48px;
     background-color: rgba(69,252,152,1);
     border-radius: 15px;
     margin: 1px;
@@ -162,6 +159,7 @@ body {
     align-items: center;
     justify-content: center;
     font-family: 'Bungee Inline', cursive;
+    border: 1px solid rgb(46, 17, 73);
 }
 .emptyShow:hover {
     opacity: 0.7;
@@ -169,8 +167,8 @@ body {
 }
 
 .emptySelected {
-    height: 50px;
-    width: 50px;
+    height: 48px;
+    width: 48px;
     background-color: rgb(180,58,142);
     border-radius: 15px;
     margin: 1px;
@@ -180,4 +178,30 @@ body {
     color: white;
     font-size: 24px;
     font-family: 'Bungee Inline', cursive;
+    border: 1px solid rgb(46, 17, 73);
+}
+
+#end-container {
+    display: none;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+#end-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(180,58,142);
+    background: linear-gradient(90deg, rgba(180,58,142,0.907657967032967) 0%, rgba(143,29,253,0.9604052197802198) 50%, rgba(69,252,152,1) 100%);   
+    border: 3px solid rgb(180,58,142);
+    width: 100%;
+    height: 70vh;
+    font-size: 50px;
+    font-family: 'Bungee Inline', cursive;
+    color: white;
+    border-radius: 100px;
+
 }

@@ -5,9 +5,13 @@ let column3 = document.getElementById("columnN")
 let column4 = document.getElementById("columnG")
 let column5 = document.getElementById("columnO")
 
+let endScreen = document.getElementById("end-container")
+let endMessage = document.getElementById("end-message")
+endScreen.addEventListener("click", () => endScreen.style.display = "none")
+
 
 class Game {
-    constructor(column1, column2, column3, column4, column5) {
+    constructor() {
         this.column1 = document.getElementById("columnB")
         this.column2 = document.getElementById("columnI")
         this.column3 = document.getElementById("columnN")
@@ -83,70 +87,75 @@ class Game {
       check(){
         if (this.cB[0].className == "correctTile" && this.cB[1].className == "correctTile" && this.cB[2].className == "correctTile"
          && this.cB[3].className == "correctTile" && this.cB[4].className == "correctTile") {
-           alert("BINGO!")
+           this.showEndMessage("BINGO!")
            this.moves = 0
            clearInterval(this.interval)
          }
         else if (this.cI[0].className == "correctTile" && this.cI[1].className == "correctTile" && this.cI[2].className == "correctTile"
         && this.cI[3].className == "correctTile" && this.cI[4].className == "correctTile") {
-          alert("BINGO!")
+          this.showEndMessage("BINGO!")
           this.moves = 0
           clearInterval(this.interval)
         }
         else if (this.cN[0].className == "correctTile" && this.cN[1].className == "correctTile" && this.cN[2].className == "correctTile"
         && this.cN[3].className == "correctTile" && this.cN[4].className == "correctTile") {
-          alert("BINGO!")
+          this.showEndMessage("BINGO!")
           this.moves = 0
           clearInterval(this.interval)
         }
         else if (this.cG[0].className == "correctTile" && this.cG[1].className == "correctTile" && this.cG[2].className == "correctTile"
         && this.cG[3].className == "correctTile" && this.cG[4].className == "correctTile") {
-          alert("BINGO!")
+          this.showEndMessage("BINGO!")
           this.moves = 0
           clearInterval(this.interval)
         }
         else if (this.cO[0].className == "correctTile" && this.cO[1].className == "correctTile" && this.cO[2].className == "correctTile"
         && this.cO[3].className == "correctTile" && this.cO[4].className == "correctTile") {
-          alert("BINGO!")
+          this.showEndMessage("BINGO!")
           this.moves = 0
           clearInterval(this.interval)
         }
         else if (this.cB[0].className == "correctTile" && this.cI[0].className == "correctTile" && this.cN[0].className == "correctTile"
         && this.cG[0].className == "correctTile" && this.cO[0].className == "correctTile") {
-          alert("BINGO!")
+          this.showEndMessage("BINGO!")
           this.moves = 0
           clearInterval(this.interval)
         }
         else if (this.cB[1].className == "correctTile" && this.cI[1].className == "correctTile" && this.cN[1].className == "correctTile"
         && this.cG[1].className == "correctTile" && this.cO[1].className == "correctTile") {
-          alert("BINGO!")
+          this.showEndMessage("BINGO!")
           this.moves = 0
           clearInterval(this.interval)
         }
         else if (this.cB[2].className == "correctTile" && this.cI[2].className == "correctTile" && this.cN[2].className == "correctTile"
         && this.cG[2].className == "correctTile" && this.cO[2].className == "correctTile") {
-          alert("BINGO!")
+          this.showEndMessage("BINGO!")
           this.moves = 0
           clearInterval(this.interval)
         }
         else if (this.cB[3].className == "correctTile" && this.cI[3].className == "correctTile" && this.cN[3].className == "correctTile"
         && this.cG[3].className == "correctTile" && this.cO[3].className == "correctTile") {
-          alert("BINGO!")
+          this.showEndMessage("BINGO!")
           this.moves = 0
           clearInterval(this.interval)
         }
         else if (this.cB[4].className == "correctTile" && this.cI[4].className == "correctTile" && this.cN[4].className == "correctTile"
         && this.cG[4].className == "correctTile" && this.cO[4].className == "correctTile") {
-          alert("BINGO!")
+          this.showEndMessage("BINGO!")
           this.moves = 0
           clearInterval(this.interval)
         }
 
         else if (this.clickedTiles.length == 40) {
-          alert("YOU RAN OUT OF MOVES! GAME OVER!")
+          this.showEndMessage("YOU RAN OUT OF MOVES! <br> GAME OVER!")
           clearInterval(this.interval)
       }
         
+      }
+
+      showEndMessage(msg) {
+        endScreen.style.display = "flex"
+        endMessage.innerHTML = msg
       }
 
       createBoard() {
