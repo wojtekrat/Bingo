@@ -1,0 +1,183 @@
+body {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.527);
+    overflow: hidden;
+    cursor: default;
+    
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#start-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bungee Inline', cursive;
+}
+
+#start-box {
+    border: 3px solid rgb(30, 17, 42);
+    height: 150px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-top: 120px; 
+    border-radius: 50px; 
+    background: rgb(180,58,142);
+    background: linear-gradient(90deg, rgba(180,58,142,0.907657967032967) 0%, rgba(143,29,253,0.9604052197802198) 50%, rgba(69,252,152,1) 100%);
+    color: white;
+}
+
+#start-box:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-board {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+#bingo-results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 10%;
+    font-family: 'Bungee Inline', cursive;
+}
+
+.moves {
+    display: flex;
+    color: white;
+    background: rgb(180,58,142);
+    background: linear-gradient(90deg, rgba(180,58,142,0.907657967032967) 0%, rgba(143,29,253,0.9604052197802198) 50%, rgba(69,252,152,1) 100%);
+    border: 2px solid rgb(46, 17, 73);
+}
+
+#moves {
+    flex-direction: column;
+    text-align: center;
+    padding: 18px 50px;
+    border-radius: 25px;
+    font-size: 30px;
+    
+}
+
+#newGame-box {
+    width: 220px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; 
+    border-radius: 50px;
+    font-size: 22px;
+}
+
+#newGame-box:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 302px;
+    grid-gap: 1px;
+}
+
+.column {
+    display: grid;
+    grid-gap: 1px;
+}
+
+.tile {
+    height: 60px;
+    width: 60px;
+    background-color: black;
+    border-radius: 25px;
+    color: white;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bungee Inline', cursive;
+}
+
+.correctTile {
+    height: 60px;
+    width: 60px;
+    background-color: rgb(180,58,142);
+    border-radius: 25px;
+    color: white;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bungee Inline', cursive;
+    
+}
+
+
+#bingoNumbers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 780px;
+    
+}
+
+.emptyShow {
+    height: 50px;
+    width: 50px;
+    background-color: rgba(69,252,152,1);
+    border-radius: 15px;
+    margin: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bungee Inline', cursive;
+}
+.emptyShow:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.emptySelected {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(180,58,142);
+    border-radius: 15px;
+    margin: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-family: 'Bungee Inline', cursive;
+}
